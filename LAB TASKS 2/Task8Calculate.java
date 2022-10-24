@@ -1,18 +1,56 @@
-import java.util.*;
-public class Task8Calculate {
+import java.util.Scanner;
+
+class Task8Calculate {
+  public static void main(String[] args) {
+
+    char operator;
+    float number1, number2, result;
+
+     
+    Scanner sc= new Scanner(System.in);
+
     
-        public static void main(String[] args) {
-            Scanner sc=new Scanner(System.in);
-            int num1,num2;
-            System.out.println("Enter Number 1");
-            num1=sc.nextInt();
-            System.out.println("Enter Number 2");
-            num2=sc.nextInt();
-            System.out.println(num1+"+"+num2+"="+(num1+num2));
-            System.out.println(num1+"-"+num2+"="+(num1-num2));
-            System.out.println(num1+"*"+num2+"="+(num1*num2));
-            System.out.println(num1+"/"+num2+"="+(num1/num2));
-        }
+    System.out.println("Choose an operator: +, -, *, or /");
+    operator = sc.next().charAt(0);
+
+    
+    System.out.println("Enter first number");
+    number1 = sc.nextFloat();
+
+    System.out.println("Enter second number");
+    number2 = sc.nextFloat();
+
+    switch (operator) {
+
+      
+      case '+':
+        result = number1 + number2;
+        System.out.println(number1 + " + " + number2 + " = " + result);
+        break;
+
+     
+      case '-':
+        result = number1 - number2;
+        System.out.println(number1 + " - " + number2 + " = " + result);
+        break;
+
+     
+      case '*':
+        result = number1 * number2;
+        System.out.println(number1 + " * " + number2 + " = " + result);
+        break;
+
+      
+      case '/':
+        result = number1 / number2;
+        System.out.println(number1 + " / " + number2 + " = " + result);
+        break;
+
+      default:
+        System.out.println("Invalid operator!");
+        break;
     }
 
-
+    
+  }
+}
